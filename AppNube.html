@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desarrollo de Web APIs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="images/UAA-LOGO.svg">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #07215e;">
+        <div class="container-fluid">
+            <a><img src="images/UAA-LOGO.svg" alt="UAA-LOGO" width="90" height="50"></a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="WebApi.html" id="nav-bar">WebApi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MicroServicios.html" id="nav-bar">MicroServicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="DesarrolloWebApi.html" id="nav-bar">Desarrollo Web
+                            API</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contenedores.html" id="nav-bar">Contenedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="AppNube.html" id="nav-bar">Aplicaciones en la nube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 id="titulo-intro">¿Qué es el Desarrollo de Aplicaciones para la Nube?</h1>
+    <div class="contenedor-intro">
+        <p id="intro">
+            El desarrollo Cloud-Native (nativo de la nube) no significa simplemente tomar una aplicación tradicional y
+            alojarla en un servidor de internet. Se trata de diseñar, construir y ejecutar aplicaciones creadas
+            específicamente para aprovechar al máximo las características de la computación en la nube (como la
+            escalabilidad, la elasticidad y la resiliencia).
+        </p>
+        <img src="images/Diagrama5.jpg" class="img-fluid" id="Dg1" alt="Esquema Microservicios">
+    </div>
+
+    <h1 id="titulo-info">1. Arquitectura de Microservicios</h1>
+    <div class="contenedor-intro">
+        <p id="intro">
+            En lugar de crear una aplicación gigante y monolítica donde todo está mezclado, el software se divide en
+            pequeños servicios independientes.
+
+            Ejemplo: En una tienda en línea, el "carrito de compras", el "catálogo de productos" y el "sistema de pagos"
+            son microservicios separados. Si el sistema de pagos falla, el catálogo sigue funcionando sin problemas.
+        </p>
+        <img src="images/Diagrama6.jpg" class="img-fluid" id="Dg1" alt="Esquema Microservicios">
+    </div>
+
+    <h1 id="titulo-info">2. Contenedores (Containers)</h1>
+    <div class="contenedor-info">
+        <p id="intro">
+            Los contenedores empaquetan cada microservicio con todo lo que necesita para funcionar (código, librerías y
+            configuraciones).
+
+            Herramienta principal: Docker.
+
+            Ventaja: Garantizan que la aplicación funcione exactamente igual en la computadora del programador, en el
+            servidor de pruebas y en producción.
+        </p>
+    </div>
+
+    <h1 id="titulo-info">3. Orquestación Dinámica</h1>
+    <div class="contenedor-info">
+        <p id="intro">
+            Cuando tienes cientos de contenedores funcionando al mismo tiempo, necesitas un sistema que los administre
+            automáticamente.
+
+            Herramienta principal: Kubernetes.
+
+            Función: Si una parte de tu aplicación recibe mucho tráfico, el orquestador "clona" (escala) ese contenedor
+            automáticamente para soportar la carga, y lo destruye cuando ya no se necesita.
+        </p>
+    </div>
+
+    <h1 id="titulo-info">4. Automatización y CI/CD (DevOps)</h1>
+    <div class="contenedor-info">
+        <p id="intro">
+            La Integración Continua y la Entrega Continua (CI/CD) permiten automatizar las pruebas y el despliegue del
+            código.
+
+            Ventaja: Los equipos de desarrollo pueden lanzar actualizaciones y nuevas funciones varias veces al día sin
+            interrumpir el servicio a los usuarios.
+        </p>
+    </div>
+
+    <footer class="text-center p-3" style="background-color: #07215e; color: white;">
+        <p>© 2026 - Licenciatura en Informática y Tecnologías Computacionales</p>
+    </footer>
+
+</body>

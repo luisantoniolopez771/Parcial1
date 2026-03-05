@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Microservicios - Parcial 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="images/UAA-LOGO.svg">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #07215e;">
+        <div class="container-fluid">
+            <a><img src="images/UAA-LOGO.svg" alt="UAA-LOGO" width="90" height="50"></a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="WebApi.html" id="nav-bar">WebApi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="MicroServicios.html" id="nav-bar">MicroServicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="DesarrolloWebApi.html" id="nav-bar">Desarrollo Web API</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contenedores.html" id="nav-bar">Contenedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="AppNube.html" id="nav-bar">Aplicaciones en la nube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 id="titulo-intro">Arquitectura de Microservicios</h1>
+
+    <div class="contenedor-intro mb-4">
+        <div id="intro">
+            <h3>¿Qué son los Microservicios?</h3>
+            <p>
+                De acuerdo con IBM, los microservicios son un enfoque arquitectónico y organizativo para el desarrollo de software donde el software está compuesto por pequeños servicios independientes que se comunican a través de API bien definidas.
+            </p>
+            <p>
+                A diferencia de las arquitecturas monolíticas tradicionales (donde todo el código está en un solo bloque), esta arquitectura nativa de la nube permite que cada servicio se ejecute en su propio proceso, facilitando la escalabilidad, el mantenimiento y la actualización independiente de cada módulo.
+            </p>
+        </div>
+        <img src="images/Diagrama2.png" class="img-fluid" id="Dg1" alt="Esquema Microservicios">
+    </div>
+
+    <h1 id="titulo-info">Características Principales</h1>
+    <div class="contenedor-info mb-4">
+        <div class="row w-100 p-3">
+            <div class="col-md-6 border-end">
+                <h4>Ventajas del Enfoque</h4>
+                <ul>
+                    <li><strong>Implementación independiente:</strong> Los equipos pueden actualizar servicios individuales sin tener que redesplegar toda la aplicación.</li>
+                    <li><strong>Escalabilidad ágil:</strong> Permite escalar únicamente los servicios que demandan más recursos en un momento dado, optimizando costos.</li>
+                    <li><strong>Libertad tecnológica:</strong> Diferentes microservicios pueden estar escritos en distintos lenguajes de programación (Java, Python, C#, etc.) y utilizar distintas bases de datos.</li>
+                </ul>
+            </div>
+            <div class="col-md-6 ps-4">
+                <h4>Retos y Consideraciones</h4>
+                <ul>
+                    <li><strong>Complejidad distribuida:</strong> Administrar decenas o cientos de servicios requiere herramientas de orquestación avanzadas (como Kubernetes).</li>
+                    <li><strong>Tolerancia a fallos:</strong> Es crucial diseñar el sistema para que la caída de un servicio no provoque una falla en cascada.</li>
+                    <li><strong>Gestión de datos:</strong> Mantener la consistencia de los datos a través de bases de datos independientes puede ser un desafío técnico.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h1 id="titulo-info">Infraestructura Cloud: Sedes Globales</h1>
+    <div class="contenedor-info mb-5">
+        <p class="text-center p-3">
+            Para alojar arquitecturas de microservicios, se utilizan proveedores de nube a gran escala. A continuación, se muestra la ubicación de las oficinas centrales de <strong>Amazon Web Services (AWS)</strong> en Seattle, Washington, uno de los líderes globales en infraestructura para microservicios y contenedores:
+        </p>
+        <div class="w-100" style="padding: 0 20px 20px 20px;">
+            <iframe 
+                src="https://maps.google.com/maps?q=Amazon%20Web%20Services,%20Seattle&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="400" 
+                style="border: 2px solid #07215e; border-radius: 10px;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+</body>
+
+<footer class="text-center p-3" style="background-color: #07215e; color: white;">
+    <p>© 2026 - Licenciatura en Informática y Tecnologías Computacionales</p>
+</footer>
+
+</html>

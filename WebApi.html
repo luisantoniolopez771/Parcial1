@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web API - Tecnologías y Subtemas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="images/UAA-LOGO.svg">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #07215e;">
+        <div class="container-fluid">
+            <a><img src="images/UAA-LOGO.svg" alt="UAA-LOGO" width="90" height="50"></a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="WebApi.html" id="nav-bar">WebApi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="MicroServicios.html"
+                            id="nav-bar">MicroServicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="DesarrolloWebApi.html" id="nav-bar">Desarrollo Web
+                            API</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contenedores.html" id="nav-bar">Contenedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="AppNube.html" id="nav-bar">Aplicaciones en la nube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 id="titulo-intro">Unidad II: Tecnologías de Web APIs</h1>
+
+    <div class="contenedor-intro mb-4">
+        <div id="intro">
+            <h3>Conceptos Fundamentales</h3>
+            <p>
+                Las Web APIs son interfaces que permiten el intercambio de datos entre un cliente y un servidor mediante
+                el protocolo HTTP. Facilitan la integración de servicios externos como Maps, PayPal o redes sociales en
+                nuestras aplicaciones.
+            </p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal"
+                style="background-color: #07215e;">
+                Ver Referencias Académicas
+            </button>
+        </div>
+        <img src="images/Diagrama1.png" class="img-fluid" id="Dg1" alt="Esquema API">
+    </div>
+
+    <h1 id="titulo-info">Arquitectura y Funcionamiento</h1>
+    <div class="contenedor-info mb-4">
+        <div class="row w-100 p-3">
+            <div class="col-md-6 border-end">
+                <h4>Tipos y Arquitecturas</h4>
+                <ul>
+                    <li><strong>Por visibilidad:</strong> Existen APIs públicas (abiertas), privadas (internas) y de
+                        socios.</li>
+                    <li><strong>Arquitectura REST:</strong> La más común actualmente, basada en recursos y el uso de
+                        métodos HTTP (GET, POST, PUT, DELETE).</li>
+                    <li><strong>SOAP:</strong> Un protocolo más rígido basado en XML, utilizado frecuentemente en
+                        entornos financieros.</li>
+                </ul>
+            </div>
+            <div class="col-md-6 ps-4">
+                <h4>Protocolos y Seguridad</h4>
+                <ul>
+                    <li><strong>HTTP/HTTPS:</strong> El protocolo base para la transferencia de datos en la web.</li>
+                    <li><strong>JSON:</strong> El formato de intercambio de datos más ligero y utilizado por las Web
+                        APIs modernas.</li>
+                    <li><strong>JSON Web Token (JWT):</strong> Un estándar abierto para transmitir información de forma
+                        segura entre las partes como un objeto JSON. Se usa principalmente para la autenticación y el
+                        intercambio de información confiable mediante firmas digitales.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h1 id="titulo-info">HTTP</h1>
+    <div class="contenedor-info">
+        <p id="intro">
+            El protocolo HTTP (Hypertext Transfer Protocol) es el cimiento fundamental sobre el cual operan las Web APIs
+            modernas, actuando como el lenguaje universal que permite la transferencia de datos entre un cliente (como
+            un navegador web o una aplicación móvil) y un servidor. Su funcionamiento se basa en un ciclo continuo de
+            "petición y respuesta" (request-response). Cuando un cliente necesita interactuar con la API, envía una
+            petición estructurada que utiliza verbos o métodos HTTP para definir la intención de la acción: GET para
+            consultar información, POST para crear nuevos registros, PUT o PATCH para actualizar datos existentes, y
+            DELETE para eliminarlos.
+        </p>
+    </div>
+
+    <h1 id="titulo-info">SOAP</h1>
+    <div class="contenedor-info">
+        <p id="intro">
+            A diferencia de las aproximaciones más modernas y ligeras, SOAP es un protocolo estándar oficial y altamente
+            estructurado, mantenido por el W3C, que fue diseñado para el intercambio formal de información en servicios
+            web. Su característica más distintiva es que utiliza de forma exclusiva XML (eXtensible Markup Language)
+            para el formato de todos sus mensajes. Esta estandarización requiere que cada petición y respuesta viaje
+            dentro de un "sobre" lógico (Envelope), el cual se divide obligatoriamente en un encabezado (Header) para
+            metadatos de seguridad o enrutamiento, un cuerpo (Body) que contiene los datos reales de la operación, y un
+            bloque de fallos (Fault) dedicado exclusivamente al manejo detallado de errores.
+        </p>
+    </div>
+
+    <h1 id="titulo-info">REST</h1>
+    <div class="contenedor-info">
+        <p id="intro">
+            A diferencia de SOAP, REST no es un protocolo estricto, sino un estilo arquitectónico introducido por Roy
+            Fielding en el año 2000. Hoy en día, se ha convertido en el estándar de la industria para el desarrollo de
+            Web APIs debido a su simplicidad y alta eficiencia. En lugar de crear reglas complejas y sobres XML pesados,
+            REST aprovecha al máximo la infraestructura existente de la web, utilizando directamente los métodos
+            estándar del protocolo HTTP (GET, POST, PUT, DELETE) para realizar operaciones CRUD (Crear, Leer,
+            Actualizar, Eliminar) sobre recursos. Estos recursos (ya sean usuarios, productos o facturas) se exponen
+            mediante URLs lógicas, limpias y estructuradas, como por ejemplo: api/v1/productos/45.
+        </p>
+    </div>
+
+    <h1 id="titulo-info">Jason Web Token</h1>
+    <div class="contenedor-info">
+        <p id="intro">
+            JSON Web Token (estándar RFC 7519) es un método seguro y compacto para transmitir información entre
+            distintas partes mediante un objeto JSON. En el contexto moderno del desarrollo de Web APIs, especialmente
+            bajo la arquitectura REST, JWT se ha consolidado como el estándar principal para la autenticación y
+            autorización. A diferencia de los métodos tradicionales que dependen de almacenar identificadores de sesión
+            en la memoria del servidor o en una base de datos, JWT es completamente autónomo (self-contained). Esto
+            significa que el propio token lleva consigo toda la información necesaria sobre el usuario (conocida como
+            claims o afirmaciones), como su ID, sus roles de acceso y el tiempo de expiración de la credencial.
+        </p>
+    </div>
+
+    <h1 id="titulo-info">Recurso Multimedia</h1>
+    <div class="contenedor-info mb-5">
+        <p class="text-center">Aprende más sobre el funcionamiento técnico de las APIs en el siguiente video:</p>
+        <div class="ratio ratio-16x9 w-75 mx-auto">
+            <iframe width="1351" height="516" src="https://www.youtube.com/embed/u2Ms34GE14U" title="Que es una API?"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="modal fade" id="miModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #07215e; color: white;">
+                    <h5 class="modal-title">Fuentes de Información - Unidad II</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Contenido basado en el material de la clase:</p>
+                    <ul>
+                        <li>Amazon Web Services (2023). ¿Qué es una API?</li>
+                        <li>IBM (2023). Definición y usos de APIs modernas.</li>
+                        <li>Estándares de Seguridad: RFC 7519 para JSON Web Tokens.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<footer class="text-center p-3" style="background-color: #07215e; color: white;">
+    <p>© 2026 - Licenciatura en Informática y Tecnologías Computacionales</p>
+</footer>
+
+</html>

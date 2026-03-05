@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desarrollo de Web APIs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="images/UAA-LOGO.svg">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #07215e;">
+        <div class="container-fluid">
+            <a><img src="images/UAA-LOGO.svg" alt="UAA-LOGO" width="90" height="50"></a>
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="WebApi.html" id="nav-bar">WebApi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MicroServicios.html" id="nav-bar">MicroServicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="DesarrolloWebApi.html" id="nav-bar">Desarrollo Web
+                            API</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contenedores.html" id="nav-bar">Contenedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="AppNube.html" id="nav-bar">Aplicaciones en la nube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 id="titulo-intro">Recomendaciones para el Desarrollo de Web APIs</h1>
+    <div class="contenedor-intro">
+        <p id="intro">
+            Para garantizar el éxito de una API, es fundamental definir objetivos claros antes de programar.
+            Se debe seguir el estándar <strong>REST</strong>, utilizando formatos de intercambio como JSON o XML.
+            La seguridad mediante autenticación (como JWT o OAuth) y la documentación exhaustiva (usando herramientas
+            como Swagger o Postman)
+            son pilares críticos para que otros desarrolladores puedan integrar el servicio de manera eficiente.
+        </p>
+        <img src="images/Diagrama3.jpg" class="img-fluid" id="Dg1" alt="Esquema Microservicios">
+    </div>
+
+    <h1 id="titulo-info">Proceso de Desarrollo paso a paso</h1>
+    <div class="contenedor-info">
+        <p>El ciclo de vida de una Web API consta de fases estructuradas para asegurar su calidad, escalabilidad y
+            mantenimiento a largo plazo:</p>
+        <ul class="list-group w-75">
+            <li class="list-group-item"><strong>1. Análisis y Planificación:</strong> Identificación de requisitos
+                funcionales, usuarios objetivo, estimación de costos y definición de la arquitectura base.</li>
+            <li class="list-group-item"><strong>2. Diseño de Endpoints:</strong> Estructuración lógica de las URLs (ej.
+                <code>/api/v1/usuarios</code>) y asignación correcta de verbos HTTP (GET para obtener, POST para crear,
+                PUT/PATCH para actualizar, DELETE para eliminar).</li>
+            <li class="list-group-item"><strong>3. Implementación:</strong> Codificación del backend utilizando
+                frameworks robustos (como Express.js en Node, Django/Flask en Python o ASP.NET en C#) y conexión a bases
+                de datos.</li>
+            <li class="list-group-item"><strong>4. Pruebas y Despliegue:</strong> Ejecución de pruebas unitarias y de
+                integración. Despliegue en servidores de producción asegurando el monitoreo constante para detectar
+                cuellos de botella.</li>
+        </ul>
+    </div>
+
+    <h1 id="titulo-info">Manejo de Contenedores</h1>
+    <div class="contenedor-info">
+        <p class="w-75 text-center mb-4">
+            Los contenedores son unidades estándar de software que empaquetan el código y todas sus dependencias para
+            que la aplicación se ejecute de forma rápida y confiable de un entorno informático a otro.
+        </p>
+
+        <ul class="list-group w-75 mt-4">
+            <li class="list-group-item"><strong>Aislamiento Ligero:</strong> A diferencia de las máquinas virtuales
+                tradicionales que requieren su propio sistema operativo completo, los contenedores (como
+                <strong>Docker</strong>) comparten el núcleo (kernel) del SO del host, haciéndolos mucho más ligeros y
+                rápidos de iniciar.</li>
+            <li class="list-group-item"><strong>Portabilidad Absoluta:</strong> Garantizan el principio de "si funciona
+                en mi máquina, funciona en producción". El contenedor se comporta exactamente igual en el equipo del
+                desarrollador, en un servidor de pruebas o en la nube pública.</li>
+            <li class="list-group-item"><strong>Orquestación (Kubernetes):</strong> Cuando una aplicación crece y
+                necesita cientos de contenedores, herramientas como Kubernetes se encargan de automatizar el despliegue,
+                el escalado y la gestión de estos, reiniciando contenedores si fallan o distribuyendo el tráfico de red.
+            </li>
+        </ul>
+    </div>
+
+    <h1 id="titulo-info">Desarrollo de Aplicaciones para la Nube</h1>
+    <div class="contenedor-info mb-5">
+        <p class="w-75 text-center mb-4">
+            El desarrollo <em>Cloud Native</em> es un enfoque para construir y ejecutar aplicaciones que aprovechan al
+            máximo las ventajas del modelo de entrega de computación en la nube (Cloud Computing).
+        </p>
+
+
+        <ul class="list-group w-75 mt-4">
+            <li class="list-group-item"><strong>Desacoplamiento con Microservicios:</strong> Las aplicaciones en la nube
+                se construyen dividiendo el software en pequeños servicios independientes. Si el servicio de
+                "facturación" falla o necesita actualizarse, el servicio de "catálogo" sigue funcionando sin
+                interrupciones.</li>
+            <li class="list-group-item"><strong>Elasticidad y Escalabilidad bajo demanda:</strong> La nube permite que
+                los recursos asignados a una aplicación aumenten o disminuyan automáticamente según el tráfico. Si hay
+                un pico de usuarios, la nube enciende más contenedores al instante.</li>
+            <li class="list-group-item"><strong>Integración y Entrega Continua (CI/CD):</strong> Se automatizan las
+                pruebas y el despliegue del código. Los equipos pueden lanzar actualizaciones múltiples veces al día sin
+                detener el servicio.</li>
+            <li class="list-group-item"><strong>Modelos Avanzados (Serverless):</strong> Las plataformas cloud modernas
+                permiten ejecutar código sin administrar servidores (arquitectura Serverless). El desarrollador solo
+                sube la función y el proveedor de la nube (como AWS, Azure o Google Cloud) cobra únicamente por los
+                milisegundos que el código tarda en ejecutarse.</li>
+        </ul>
+    </div>
+
+    <footer class="text-center p-3" style="background-color: #07215e; color: white;">
+        <p>© 2026 - Licenciatura en Informática y Tecnologías Computacionales</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
